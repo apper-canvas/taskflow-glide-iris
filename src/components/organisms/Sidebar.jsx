@@ -88,7 +88,7 @@ const Sidebar = ({ currentUser }) => {
                     {currentUser.name}
                   </p>
                   <p className="text-xs text-gray-500 capitalize">
-                    {currentUser.role.replace("_", " ")}
+{currentUser?.role?.replace("_", " ") || "User"}
                   </p>
                 </div>
               </div>
