@@ -216,11 +216,11 @@ const Users = ({ currentUser }) => {
                         >
                           <ApperIcon name="Edit" size={16} />
                         </Button>
-                        <Button
+<Button
                           size="sm"
                           variant="ghost"
                           onClick={() => openDeleteModal(user)}
-                          disabled={user.Id === currentUser.Id}
+                          disabled={currentUser.role !== 'admin' || user.Id === currentUser.Id}
                         >
                           <ApperIcon name="Trash2" size={16} className="text-error" />
                         </Button>
