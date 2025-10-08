@@ -116,19 +116,31 @@ const Sidebar = ({ currentUser }) => {
             ))}
           </nav>
 
-          {currentUser && (
+{currentUser && (
             <div className="p-4 border-t border-gray-200">
               <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
-                <Avatar src={currentUser.avatar} alt={currentUser.name} size="md" />
+                <Avatar src={currentUser.avatar_c || currentUser.avatar} alt={currentUser.name_c || currentUser.name} size="md" />
                 <div className="flex-1 min-w-0">
                   <p className="text-sm font-medium text-gray-900 truncate">
-                    {currentUser.name}
+                    {currentUser.name_c || currentUser.name}
                   </p>
-                  <p className="text-xs text-gray-500 capitalize">
-                    {currentUser.role.replace("_", " ")}
+                  <p className="text-xs text-gray-500 capitalize truncate">
+                    {(currentUser.role_c || currentUser.role || '').replace("_", " ")}
                   </p>
                 </div>
               </div>
+              <button
+                onClick={() => {
+                  const authContext = React.useContext(require('../../App').AuthContext);
+                  if (authContext && authContext.logout) {
+                    authContext.logout();
+                  }
+                }}
+                className="w-full mt-2 flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+              >
+                <ApperIcon name="LogOut" size={20} />
+                <span className="font-medium">Logout</span>
+              </button>
             </div>
           )}
         </div>
