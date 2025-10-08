@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { AuthContext } from '../../App';
 import { NavLink } from "react-router-dom";
 import ApperIcon from "@/components/ApperIcon";
 import Avatar from "@/components/atoms/Avatar";
 
 const Sidebar = ({ currentUser }) => {
+  const authContext = useContext(AuthContext);
   const [isOpen, setIsOpen] = useState(false);
 
   const navigation = [
@@ -130,8 +132,7 @@ const Sidebar = ({ currentUser }) => {
                 </div>
               </div>
               <button
-                onClick={() => {
-                  const authContext = React.useContext(require('../../App').AuthContext);
+onClick={() => {
                   if (authContext && authContext.logout) {
                     authContext.logout();
                   }
