@@ -10,8 +10,7 @@ const taskService = {
     try {
       const params = {
         fields: [
-          {"field": {"Name": "Id"}},
-          {"field": {"Name": "Name"}},
+{"field": {"Name": "Id"}},
           {"field": {"Name": "title_c"}},
           {"field": {"Name": "description_c"}},
           {"field": {"Name": "project_id_c"}},
@@ -42,8 +41,7 @@ const taskService = {
     try {
       const params = {
         fields: [
-          {"field": {"Name": "Id"}},
-          {"field": {"Name": "Name"}},
+{"field": {"Name": "Id"}},
           {"field": {"Name": "title_c"}},
           {"field": {"Name": "description_c"}},
           {"field": {"Name": "project_id_c"}},
@@ -74,8 +72,7 @@ const taskService = {
     try {
       const params = {
         fields: [
-          {"field": {"Name": "Id"}},
-          {"field": {"Name": "Name"}},
+{"field": {"Name": "Id"}},
           {"field": {"Name": "title_c"}},
           {"field": {"Name": "description_c"}},
           {"field": {"Name": "project_id_c"}},
@@ -109,8 +106,7 @@ const taskService = {
     try {
       const params = {
         fields: [
-          {"field": {"Name": "Id"}},
-          {"field": {"Name": "Name"}},
+{"field": {"Name": "Id"}},
           {"field": {"Name": "title_c"}},
           {"field": {"Name": "description_c"}},
           {"field": {"Name": "project_id_c"}},
@@ -143,9 +139,8 @@ const taskService = {
   async getByStatus(status) {
     try {
       const params = {
-        fields: [
+fields: [
           {"field": {"Name": "Id"}},
-          {"field": {"Name": "Name"}},
           {"field": {"Name": "title_c"}},
           {"field": {"Name": "description_c"}},
           {"field": {"Name": "project_id_c"}},
@@ -178,9 +173,8 @@ const taskService = {
   async getByPriority(priority) {
     try {
       const params = {
-        fields: [
+fields: [
           {"field": {"Name": "Id"}},
-          {"field": {"Name": "Name"}},
           {"field": {"Name": "title_c"}},
           {"field": {"Name": "description_c"}},
           {"field": {"Name": "project_id_c"}},
